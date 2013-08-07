@@ -6,28 +6,12 @@
   <%= f.error_notification %>
   <%= display_base_errors @user_session %>
 
-<div class="formList">
-
-
-  <%= f.label :username, "Username" %> </br >
-
-  <%= f.text_field :username %>
-</div>
-
-<div>
-  <%= f.label :password, "Password" %> </br >
-
-  <%= f.password_field :password %>
-</div>
-
-
-<div>
-<p>
-  <%= f.submit "Sign in", :class => "btn btn-info" %>
-
-</ div>
+  <%= f.input :username, wrapper_html: { class: 'username' } %>
+  <%= f.input :password, wrapper_html: { id: 'password' } %>
+  <%= f.input :remember_me, as: :boolean, inline_label: 'Remember me', label: false %>
+  <%= f.button :submit %>
 
 <% end %>
 <p>
 if u dont have an account  click on sign up </br >
-<%= link_to 'Sign up', 'registration' %> 
+<%= link_to 'Sign up', new_user_path %> 
