@@ -9,6 +9,12 @@
 		<%= f.input :password %>
 		<%= f.input :password_confirmation %>
 		  <%= button_tag( :class => "btn btn-info", disable_with: 'creating user...') do %>
-     		 <i class="icon-plus icon-white"></i>Create user 
+     		 <%if  !current_user %>
+     		 <i class="icon-plus icon-white"></i>
+     			Create user
+     		<% else %>
+     		<i class="icon-upload icon-white"></i>
+     			Update profile 
+     		<% end %>
   		  <% end %>
 	<% end %> 

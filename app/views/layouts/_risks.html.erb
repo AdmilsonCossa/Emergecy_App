@@ -1,0 +1,43 @@
+
+
+<div class = "risk_icons">
+
+<%= link_to new_user_path, class: 'btn-mini btn-info btn' do %>
+  <i class="icon-plus icon-white"></i> 
+<% end %> |
+	<%= link_to new_user_path, class: 'btn-mini btn-info btn' do %>
+  <i class="icon-ok icon-white"></i> 
+<% end %> | 
+	<%= link_to new_user_path, class: 'btn-mini btn-info btn' do %>
+  <i class="icon-tint icon-white"></i> 
+<% end %> |
+	<%= link_to new_user_path, class: 'btn-mini btn-info btn' do %>
+  <i class="icon-time icon-white"></i> 
+<% end %>
+
+
+<br>
+<%= simple_form_for risks_url do |f| %>
+<fieldset class="scheduler-border">
+    <legend class="scheduler-border"><i class="icon-filter icon-black"></i> Filters</legend>
+    <div class="control-group">
+        <label class="control-label input-label" for="startTime">Risk type :</label>
+        <%  types= Type.all %>  
+      	<%= select_tag "selected_type", options_from_collection_for_select(types,  "id", "name") %>
+      	<label class="control-label input-label" for="startTime">Location name :</label>
+      	<%  locations= Location.all %>
+        <%= select_tag "selected_location", options_from_collection_for_select(locations,  "id", "name") %>
+        <label class="control-label input-label" for="startTime">Begin date :</label>
+ 		
+
+	    <div class="input-append date" id="dp3" data-date="12-02-2012" data-date-format="dd-mm-yyyy">
+	    <input class="span2" size="16" type="text" value="12-02-2012">
+	    <span class="add-on"><i class="icon-th"></i></span>
+	    </div>
+
+
+    </div>
+</fieldset>
+<% end %>
+</div>
+

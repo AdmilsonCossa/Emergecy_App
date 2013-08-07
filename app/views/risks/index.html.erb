@@ -1,3 +1,5 @@
+    <%= render 'layouts/risks' %>
+
     <h1>Listing risks</h1>
     <hr>
 
@@ -26,31 +28,7 @@
        <th> 
      <tbody>
  
-       <%= form_tag risks_url,  :action => "search" , :method => :get  do   %>
-       <tr>    
-       <td headers="n r1"> <label for="name"> risk type: </label>
-       <th>  <%  types= Type.all %>
-          
-      <%= select_tag "selected_type", options_from_collection_for_select(types,  "id", "name") %>
-         
 
-      <tr>
-       <td headers="n r2"> <label for="website"> Location Name: </label> 
-       <%  locations= Location.all %>
-      <th>   <%= select_tag "selected_location", options_from_collection_for_select(locations,  "id", "name") %>
-    
-       <tr>
-       <td> <label for="name">  Begin date: </label>
-      
-        
-       <td>  <%=  date_select("arisks", "beginning in", :start_year => 2013 )  %> 
-
-        
-    
-
-        <tr>
-        <td> <%= submit_tag "Filter" %>
-          <% end %>
        
     </table>
     

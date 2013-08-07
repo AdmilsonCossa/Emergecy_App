@@ -1,5 +1,7 @@
 	class UsersController < ApplicationController
 
+		skip_before_filter :login_required, :only => [:new,:create]
+
 	  def new
 	  
 	  @user = User.new
@@ -31,7 +33,7 @@
 
 		if @user.update_attributes params[:user]
 			flash[:notice] = "Update successful!"
-			redirect_to "/my_account"
+			redirect_to "/"
 		else
 			render :action => :edit
 		end

@@ -7,3 +7,11 @@ background-color:  #f0ffff;
 color: #4682b4;
 font-family:arial;
 }
+
+           .datepicker {
+                /* Appended to body, abs-pos off the page */
+                position: absolute;
+                display: none;
+                top: -9999em;
+                left: -9999em;
+            }

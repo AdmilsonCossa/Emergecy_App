@@ -4,6 +4,8 @@ EmergencyApp::Application.routes.draw do
 
   get 'home', to: "home#index"
 
+  get 'risks', to: "risks#index"
+
   resources :user_sessions 
   
   get 'login', to: "user_sessions#new"

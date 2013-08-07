@@ -4,8 +4,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user
 
-  before_filter :login_required, :only => :new_user_session
-
+  before_filter :login_required
   
   private
 
@@ -34,7 +33,8 @@ class ApplicationController < ActionController::Base
     end 
 
     def login_required
-        redirect_to('/') if current_user.blank?
+       
+       redirect_to  login_path unless current_user
     end
 
 end

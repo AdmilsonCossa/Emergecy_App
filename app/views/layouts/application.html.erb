@@ -2,13 +2,16 @@
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= content_for?(:title) ? yield(:title) : "Rails Bootstrap" %></title>
-    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Rails Bootstrap" %>">
+    <title><%= content_for?(:title) ? yield(:title) : "Risk Managment" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Risk Managment" %>">
     <%= stylesheet_link_tag "application", :media => "all" %>
     <%= stylesheet_link_tag "bootstrap_and_overrides" %>
-
     <%= javascript_include_tag "application" %>
-    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag "datepicker" %>  
+     <%= javascript_include_tag "bootstrap-datepicker" %>
+    <%= csrf_meta_tags %> 
+
+
   </head>
   <body>
     <header class="navbar navbar-fixed-top">

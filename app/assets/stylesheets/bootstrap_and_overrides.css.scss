@@ -21,5 +21,21 @@ color: black;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#faebd7', GradientType=0);
 }
 
-$linkColor:      #EDDA74;
-$linkColorHover: #D4A017;
+.risk_icons{ float: right;}
+
+ 
+fieldset.scheduler-border {
+    border: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+    margin: 0 0 1.5em 0 !important;
+    -webkit-box-shadow:  0px 0px 0px 0px #000;
+            box-shadow:  0px 0px 0px 0px #000;
+}
+
+legend.scheduler-border {
+
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    text-align: left !important;
+
+}

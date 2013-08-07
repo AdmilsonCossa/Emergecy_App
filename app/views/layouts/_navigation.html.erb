@@ -5,10 +5,13 @@
     <%= link_to('Logout', logout_path, :method=>'delete') %>
     </li>
 
-  <% end %>
-  <% if current_user.present? %>
     <li>
-    <%= link_to('Edit account', '#') %>
+    <%= link_to('Risks', 'risks') %>
+	</li>
 
+     <li>
+    <%= link_to('Edit account', 'edit_profile') %>
+	</li>
   <% end %>
+
 </ul>
