@@ -1,3 +1,25 @@
 @import "bootstrap";
-body { padding-top: 60px; }
+body { 
+padding-top: 60px; 
+font-family: "Times New Roman", Times, serif ; 
+color: black;
+}
 @import "bootstrap-responsive";
+
+.navbar-inner {
+  background-color: #faebd7; /* fallback color, place your own */
+  /* Gradients for modern browsers, replace as you see fit */
+  background-image: -moz-linear-gradient(top, #87ceeb,  #4682b4);
+  background-image: -ms-linear-gradient(top, #faebd7, 	#faebd7);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#faebd7), to(#faebd7));
+  background-image: -webkit-linear-gradient(top, #faebd7, #faebd7);
+  background-image: -o-linear-gradient(top, #faebd7, #faebd7);
+  background-image: linear-gradient(top, #faebd7, #faebd7);
+  background-repeat: repeat-x;
+
+  /* IE8-9 gradient filter */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#333333', endColorstr='#faebd7', GradientType=0);
+}
+
+$linkColor:      #EDDA74;
+$linkColorHover: #D4A017;

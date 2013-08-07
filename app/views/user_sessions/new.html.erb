@@ -1,4 +1,5 @@
-<h1>Login</h1>
+
+<h2 class = "login">Login</h2>
 
 
 <%= simple_form_for(@user_session, :html => {:class => 'form-horizontal' }) do |f|  %>
@@ -9,9 +10,13 @@
   <%= f.input :username, wrapper_html: { class: 'username' } %>
   <%= f.input :password, wrapper_html: { id: 'password' } %>
   <%= f.input :remember_me, as: :boolean, inline_label: 'Remember me', label: false %>
-  <%= f.button :submit %>
+  <%= button_tag( :class => "btn btn-info", disable_with: 'processing...') do %>
+      Sign in <i class="icon-user icon-white"></i>
+  <% end %>
 
 <% end %>
 <p>
 if u dont have an account  click on sign up </br >
-<%= link_to 'Sign up', new_user_path %> 
+	<%= link_to new_user_path, class: 'btn-mini btn-info btn' do %>
+  <i class="icon-plus icon-white"></i> Sign up
+<% end %>

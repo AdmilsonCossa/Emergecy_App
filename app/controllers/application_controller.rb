@@ -1,9 +1,10 @@
 class ApplicationController < ActionController::Base
+
   protect_from_forgery
 
   helper_method :current_user_session, :current_user
 
-  #before_filter :verifica_login 
+  before_filter :login_required, :only => :new_user_session
 
   
   private
@@ -32,14 +33,8 @@ class ApplicationController < ActionController::Base
       @new_user_session = UserSession.new
     end 
 
-
-    def verifica_login
-
-      if !current_user.present?
-
-          redirect_to new_user_session_path  #unless !current_user.present?    
-        end
-    #redirect_to controller: 'user_sessions', action: 'new' unless current_user
-  
+    def login_required
+        redirect_to('/') if current_user.blank?
     end
+
 end

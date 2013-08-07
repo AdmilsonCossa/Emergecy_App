@@ -1,4 +1,6 @@
 class RisksController < ApplicationController
+
+
   # GET /risks
   # GET /risks.json
   def index
