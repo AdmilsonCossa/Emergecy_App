@@ -8,7 +8,7 @@ EmergencyApp::Application.routes.draw do
   
   get 'login', to: "user_sessions#new"
 
-  get 'logout', to: "user_sessions#destroy"
+  match 'logout' => "user_sessions#destroy", :as => :logout
 
   resources :users 
   

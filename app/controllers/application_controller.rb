@@ -3,28 +3,7 @@ class ApplicationController < ActionController::Base
 
   helper_method :current_user_session, :current_user
 
-  before_filter :verifica_login 
-  
-
-
-before_filter lambda { |controller| 
-      result = controller.is_object_on_same_account_as_current_account_for_id?(
-                  controller_name.classify.constantize, 
-                  controller.params[:id])
-      puts result
-      if !result
-        flash[:error] = "You do not have permission to delete this Object."
-        redirect_to "/" # or wherever you want to redirect to
-      end
-  }, :only => [:destroy]
-
-
-
-
-
-
-
-
+  #before_filter :verifica_login 
 
   
   private

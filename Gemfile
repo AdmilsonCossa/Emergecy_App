@@ -21,7 +21,8 @@ group :assets do
 end
 
 gem 'twitter-bootstrap-rails'
-#gem 'simple-form'
+gem 'bootstrap-sass'
+gem 'simple_form'
 
 gem 'jquery-rails'
 
