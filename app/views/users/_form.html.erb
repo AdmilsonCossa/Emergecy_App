@@ -1,6 +1,7 @@
 	<%= form_for(@user) do |f| %>
 
-	<%= render "shared/error_messages", :target => @user %>
+	  <%= f.error_notification %>
+ 		 <%= display_base_errors @user %>
 
 	<div class="field">
 		<%= f.label :username %><br />
