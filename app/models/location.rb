@@ -1,5 +1,7 @@
 class Location < ActiveRecord::Base
   attr_accessible :latitude, :name
-  has_many :risks
+ 
+  has_many :risk
+
   
 end

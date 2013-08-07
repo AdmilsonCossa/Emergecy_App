@@ -1,9 +1,75 @@
 --- 
 cursor_positions: 
+  - :path: app/views/layouts/application.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:37:06 +02:00
+  - :path: db/migrate/20130730151822_remove_stuffs_from_risk.rb
+    :cursor_offset: 157
+    :timestamp: 2013-07-30 17:20:04 +02:00
+  - :path: db/migrate/20130801081411_remove_lo_ty.rb
+    :cursor_offset: 97
+    :timestamp: 2013-08-01 10:15:50 +02:00
+  - :path: app/views/locations/index.html.erb
+    :cursor_offset: 477
+    :timestamp: 2013-07-29 16:48:26 +02:00
+  - :path: app/views/locations/_form.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:48:26 +02:00
+  - :path: app/controllers/types_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:47:33 +02:00
+  - :path: app/controllers/locations_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-08-01 11:17:13 +02:00
+  - :path: app/controllers/application_controller.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:37:06 +02:00
+  - :path: app/models/type.rb
+    :cursor_offset: 86
+    :timestamp: 2013-07-31 16:18:46 +02:00
+  - :path: app/models/location.rb
+    :cursor_offset: 89
+    :timestamp: 2013-08-01 11:15:58 +02:00
+  - :path: db/migrate/20130730151414_add_ids_to_risk.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-30 17:16:39 +02:00
+  - :path: db/migrate/20130730145755_add_end_date_to_risk_.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-30 17:00:18 +02:00
+  - :path: db/migrate/20130729145038_addlongitude_to_location.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-30 17:00:22 +02:00
   - :path: db/migrate/20130729144826_create_locations.rb
     :cursor_offset: 130
     :timestamp: 2013-07-29 17:11:04 +02:00
-  - :path: db/migrate/20130729145038_addlongitude_to_location.rb
-    :cursor_offset: 193
-    :timestamp: 2013-07-29 17:11:35 +02:00
+  - :path: db/migrate/20130729144733_create_types.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:47:33 +02:00
+  - :path: db/migrate/20130729144054_create_risks.rb
+    :cursor_offset: 0
+    :timestamp: 2013-07-31 14:37:56 +02:00
+  - :path: db/migrate/20130801133012_remove.rb
+    :cursor_offset: 181
+    :timestamp: 2013-08-01 15:37:51 +02:00
+  - :path: app/views/risks/_form.html.erb
+    :cursor_offset: 972
+    :timestamp: 2013-08-01 15:38:51 +02:00
+  - :path: app/views/risks/show.html.erb
+    :cursor_offset: 0
+    :timestamp: 2013-07-29 16:40:54 +02:00
+  - :path: app/views/risks/index.html.erb
+    :cursor_offset: 1121
+    :timestamp: 2013-08-01 16:53:37 +02:00
+  - :path: app/controllers/risks_controller.rb
+    :cursor_offset: 138
+    :timestamp: 2013-08-01 16:55:33 +02:00
+  - :path: app/models/risk.rb
+    :cursor_offset: 182
+    :timestamp: 2013-08-01 16:56:50 +02:00
+  - :path: db/migrate/20130805151415_create_users.rb
+    :cursor_offset: 315
+    :timestamp: 2013-08-05 17:17:40 +02:00
+  - :path: Gemfile
+    :cursor_offset: 184
+    :timestamp: 2013-08-05 17:15:56 +02:00
 files_to_retain: 0

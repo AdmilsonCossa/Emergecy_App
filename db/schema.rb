@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130729145038) do
+ActiveRecord::Schema.define(:version => 20130805153552) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
@@ -23,19 +23,36 @@ ActiveRecord::Schema.define(:version => 20130729145038) do
   end
 
   create_table "risks", :force => true do |t|
-    t.string   "location"
-    t.string   "type"
     t.text     "description"
     t.date     "date_from"
     t.time     "time_from"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+    t.date     "end_date"
+    t.integer  "locations_id"
+    t.integer  "type_id"
+    t.integer  "location_id"
   end
 
   create_table "types", :force => true do |t|
     t.string   "name"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
+  end
+
+  create_table "user_sessions", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  create_table "users", :force => true do |t|
+    t.string   "username"
+    t.string   "email"
+    t.string   "crypted_password"
+    t.string   "password_salt"
+    t.string   "persistence_token"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
   end
 
 end

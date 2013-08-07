@@ -3,5 +3,9 @@ class Type < ActiveRecord::Base
   
   has_many :risk
 
+def to_s
+
+  puts :name
+end
 
 end

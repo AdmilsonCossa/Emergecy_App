@@ -1,0 +1,31 @@
+<h1>Login</h1>
+
+<%= form_for  @user_session  do |f|  %>
+
+<%= render "shared/error_messages", :target => @user_session %>
+
+<div class="formList">
+
+
+  <%= f.label :username, "Username" %> </br >
+
+  <%= f.text_field :username %>
+</div>
+
+<div>
+  <%= f.label :password, "Password" %> </br >
+
+  <%= f.password_field :password %>
+</div>
+
+
+<div>
+<p>
+  <%= f.submit "Sign in", :class => "btn btn-info" %>
+
+</ div>
+
+<% end %>
+<p>
+if u dont have an account  click on sign up </br >
+<%= link_to 'Sign up', 'registration' %> 
