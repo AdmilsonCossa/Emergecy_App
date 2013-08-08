@@ -23,6 +23,7 @@ end
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'
+gem 'bootstrap-datepicker-rails'
 
 gem 'jquery-rails'
 

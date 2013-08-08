@@ -10,6 +10,12 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
+
+//= require bootstrap-datepicker
+//= require bootstrap-datepicker/core
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.es
+//= require bootstrap-datepicker/locales/bootstrap-datepicker.fr
+
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
