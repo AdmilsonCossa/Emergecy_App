@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130805153552) do
+ActiveRecord::Schema.define(:version => 20130809000719) do
 
   create_table "locations", :force => true do |t|
     t.string   "name"
@@ -22,15 +22,24 @@ ActiveRecord::Schema.define(:version => 20130805153552) do
     t.float    "radius"
   end
 
+  create_table "periods", :force => true do |t|
+    t.date     "from_date"
+    t.date     "end_date"
+    t.string   "probability"
+    t.string   "impact"
+    t.datetime "created_at",  :null => false
+    t.datetime "updated_at",  :null => false
+    t.integer  "risk_id"
+  end
+
   create_table "risks", :force => true do |t|
     t.integer  "location_id"
     t.integer  "type_id"
     t.text     "description"
-    t.date     "date_from"
     t.time     "time_from"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
-    t.date     "end_date"
+    t.integer  "period_id"
   end
 
   create_table "types", :force => true do |t|

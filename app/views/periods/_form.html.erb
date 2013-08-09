@@ -1,0 +1,13 @@
+<%= simple_form_for(@period) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.input :from_date %>
+    <%= f.input :end_date %>
+
+  </div>
+ Location.all.map { |x| [x.name, x.id] 
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>

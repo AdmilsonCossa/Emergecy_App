@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  from_date: 2013-08-08
+  end_date: 2013-08-08
+  probability: MyString
+  impact: MyString
+
+two:
+  from_date: 2013-08-08
+  end_date: 2013-08-08
+  probability: MyString
+  impact: MyString

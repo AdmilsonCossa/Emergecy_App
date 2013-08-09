@@ -16,7 +16,12 @@
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.es
 //= require bootstrap-datepicker/locales/bootstrap-datepicker.fr
 
+
+
+
+
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
+//= require jquery_nested_form
 //= require_tree .

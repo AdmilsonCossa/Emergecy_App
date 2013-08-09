@@ -2,6 +2,9 @@ EmergencyApp::Application.routes.draw do
   
   
 
+  resources :periods
+
+
   get 'home', to: "home#index"
 
   get 'risks', to: "risks#index"

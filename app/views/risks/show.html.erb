@@ -2,12 +2,12 @@
 
 <p>
   <b>Location:</b>
-  <%= @risk.location %>
+  <%= @risk.location.name %>
 </p>
 
 <p>
   <b>Type:</b>
-  <%= @risk.type %>
+  <%= @risk.type.name %>
 </p>
 
 <p>
@@ -16,14 +16,10 @@
 </p>
 
 <p>
-  <b>Date from:</b>
-  <%= @risk.date_from %>
+  <b>Number of periods:</b>
+  <%= @risk.periods.count %>
 </p>
 
-<p>
-  <b>Time from:</b>
-  <%= @risk.time_from %>
-</p>
 
 
 <%= link_to 'Edit', edit_risk_path(@risk) %> |

@@ -20,6 +20,8 @@ group :assets do
   gem 'uglifier', '>= 1.0.3'
 end
 
+
+gem "nested_form"
 gem 'twitter-bootstrap-rails'
 gem 'bootstrap-sass'
 gem 'simple_form'

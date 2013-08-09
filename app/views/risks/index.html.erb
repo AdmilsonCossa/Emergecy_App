@@ -2,86 +2,34 @@
 
     <h1>Listing risks</h1>
     <hr>
-
-
-
-    <div>
-       
-
-
-    <table>
-     <caption> <h4>Filter </h4> 
-    </caption>
-    
-
-    <%= form_tag risks_url, :method => :get do %>
-    <%= text_field_tag :search_term, params[:search_term] %>
-    <%= submit_tag "Search" %>
-<% end %>
-
-<hr>
- 
-     <thead>
-      <tr>
-       <th id="n"> 
-       <th> 
-       <th> 
-     <tbody>
- 
-
-       
-    </table>
-    
-    
-
-  
-  
-    <br>
-    <hr>
-    
     
     <div>
-      
-  
-  
-</div>
+        <%= form_tag risks_url, :method => :get do %>
+        <%= text_field_tag :search_term, params[:search_term] %>
+        <%= submit_tag "Search" %>
+    <% end %>
+    </div>
+<table >
     
-
-    </div>
-
-    <table>
-    <div> 
-    <form> 
-
-
-    </div>
-
-      <tr>
+    <tr>
         <th>Location</th>
         <th>Type</th>
         <th>Description</th>
-        <th>Date from</th>
-        <th>Time from</th>
         <th></th>
         <th></th>
         <th></th>
       </tr>
 
-    <% @risks.each do |risk| %>
+    <%  @risks.each do |risk|    %>
       <tr>
       <td><%= risk.location.name if risk.location %></td>
         <td><%= risk.type.name if risk.type %></td>
         <td><%= risk.description %></td>
-        <td><%= risk.date_from %></td>
-        <td><%= risk.time_from %></td>
+        
         <td><%= link_to 'Show', risk %></td>
         <td><%= link_to 'Edit', edit_risk_path(risk) %></td>
         <td><%= link_to 'Destroy', risk, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
-    
-    </table>
-
-    <br />
-
+    </table><br />
    <%= link_to 'New Risk', new_risk_path %>

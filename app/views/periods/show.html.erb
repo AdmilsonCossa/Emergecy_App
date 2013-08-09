@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>From date:</b>
+  <%= @period.from_date %>
+</p>
+
+<p>
+  <b>End date:</b>
+  <%= @period.end_date %>
+</p>
+
+<p>
+  <b>Probability:</b>
+  <%= @period.probability %>
+</p>
+
+<p>
+  <b>Impact:</b>
+  <%= @period.impact %>
+</p>
+
+
+<%= link_to 'Edit', edit_period_path(@period) %> |
+<%= link_to 'Back', periods_path %>

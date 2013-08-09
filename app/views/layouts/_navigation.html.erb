@@ -12,6 +12,13 @@
      <li>
     <%= link_to('Edit account', 'edit_profile') %>
 	</li>
-  <% end %>
-
+     <% end %>
 </ul>
+
+<p class = "navbar-text pull-right"> 
+    <% if current_user %>
+        <%= link_to "logged in as #{current_user.username  }", '#'  %>
+    <% else %>
+        <%=  %>
+    <% end %>
+  </p>

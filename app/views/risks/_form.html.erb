@@ -1,6 +1,6 @@
 
+<%= simple_nested_form_for @risk do |f| %>
 
-<%= form_for(@risk) do |f| %>
   <% if @risk.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@risk.errors.count, "error") %> prohibited this risk from being saved:</h2>
@@ -18,29 +18,51 @@
 
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_area :description, :id => "message", :class => "input-xlarge span6", :rows => "5" %>
   </div>
-  <div class="field">
-    <%= f.label :date_from %><br />
-    <%= f.date_select :date_from %>
-  </div>
-  <div class="field">
-    <%= f.label :end_date %><br />
-    <%= f.date_select :end_date %>
-  </div>
+  
+
+ 
 
   <div class="field">
-    <%= f.label :time_from %><br />
-    <%= f.time_select :time_from %>
-  </div>
-
-  <div class="field">
-    <%= f.label :type_id %><br />
+    <%= f.label :type_id %>
     <%= f.select :type_id, Type.all.map { |x| [x.name, x.id] } %>
   </div>
   <div class="field">
-    <%= f.label :location_id %><br />
+    <%= f.label :location_id %>
     <%= f.select :location_id, Location.all.map { |x| [x.name, x.id] } %>
+</div>
+   
+    <%= f.fields_for :periods do |period_form| %>
+       <div class="field">
+        <%= period_form.label :from_date %>
+        <%= period_form.date_select :from_date %>
+       </div >
+
+       <div class="field">
+        <%= period_form.label :end_date %>
+        <%= period_form.date_select :end_date %>
+      </div>
+       <div class="field">
+         <%= period_form.label :impact %>
+         <%= period_form.select :impact, (1..5).map { |i| [Period.impact_list(i)]} %>
+      </div>
+      
+
+      <div class="field">
+         <%= period_form.label :probability %>
+         <%= period_form.select :probability, (1..5).map { |i| [Period.probability_list(i)]} %>
+      </div>
+
+      <div class="field">
+        
+          <%= period_form.link_to_remove "Remove this period" %>
+      </div>
+        
+
+    <% end %>
+
+    <p> <%= f.link_to_add "Add a period ", :periods %></p>
 
   </div>
   <div class="actions">

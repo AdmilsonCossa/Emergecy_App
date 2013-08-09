@@ -1,0 +1,69 @@
+<h1>Listing periods</h1>
+
+<table  class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th>From date</th>
+    <th>End date</th>
+    <th>Probability</th>
+    <th>Impact</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @periods.each do |period| %>
+  <tr>
+    <td><%= period.from_date %></td>
+    <td><%= period.end_date %></td>
+    <td><%= period.probability %></td>
+    <td><%= period.impact %></td>
+    <td><%= link_to 'Show', period %></td>
+    <td><%= link_to 'Edit', edit_period_path(period) %></td>
+    <td><%= link_to 'Destroy', period, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+ <%= link_to 'New Period', new_period_path %>
+
+ <br />
+
+<div>
+<table  class="table table-striped table-bordered table-condensed">
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</table>
+
+<table  class="table table-striped table-bordered table-condensed">
+
+    <tr>
+    <%  @probabilities.each do |a| %>
+          <td>  </td>
+          <td> <%= a %> </td>
+    <% end %>
+    </tr>
+  
+      <%  @impacts.each  do |i| %>   
+        <tr>
+          <td> <%= i %> </td>
+          <%  @probabilities.each do |a| %>
+            <%  @periods.each do |p|  %> 
+              <% if (p.impact == i and p.probability == a ) %> 
+                <td> <%= "R #{ p.risk_id}" %> </td>
+                <% else %>
+                 <td> </td>
+              <% end %>
+            <% end %>
+     <% end %>
+     </tr>
+<% end %>
+
+</table>
+
+</div>
