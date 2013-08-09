@@ -4,27 +4,20 @@ class PeriodsController < ApplicationController
   def index
     @periods = Period.all
 
-@probabilities = [ 
-                          "Very Low",
-                          "Low",
-                          "Equally likely",
-                          "High",
-                          "Very High"
-                         ]
-
-
-
-
-
-
-
-@impacts = [
-                     "Negligible",
-                     "Minor",
-                     "Major",
-                     "Severe",
-                     "Catastrophic"
-                    ]
+    @probabilities = [ 
+                              "Very Low",
+                              "Low",
+                              "Equally likely",
+                              "High",
+                              "Very High"
+                             ]
+    @impacts = [
+                         "Negligible",
+                         "Minor",
+                         "Major",
+                         "Severe",
+                         "Catastrophic"
+                        ]
 
 
 
@@ -104,28 +97,6 @@ class PeriodsController < ApplicationController
       format.json { head :no_content }
     end
   end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 end

@@ -4,22 +4,13 @@ EmergencyApp::Application.routes.draw do
 
   resources :periods
 
-
-  get 'home', to: "home#index"
-
-  get 'risks', to: "risks#index"
-
   resources :user_sessions 
-  
-  get 'login', to: "user_sessions#new"
 
   match 'logout' => "user_sessions#destroy", :as => :logout
+  match 'login' => "user_sessions#new", :as => :login
+  match 'home' => "home#index", :as => :home
 
   resources :users 
-  
-  get 'registration', to: "users#new"
-
-  get 'edit_profile', to: "users#edit"
 
   resources :locations
 
@@ -29,7 +20,9 @@ EmergencyApp::Application.routes.draw do
 
   resources :risks
 
-  root :to => "user_sessions#new", as: 'login' 
+  root :to => "user_sessions#new", as: 'login'
+
+  
 
 
   # The priority is based upon order of creation:

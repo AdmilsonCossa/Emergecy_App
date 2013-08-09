@@ -3,7 +3,9 @@ class HomeController < ApplicationController
   helper_method :sort_column, :sort_direction
 
   def index
-  	 @periods = Period.order(sort_column + " " + sort_direction)
+     @periods = Period.all
+     @probabilities = [ "Very Low","Low","Equally likely","High","Very High"]
+     @impacts = [ "Negligible","Minor","Major","Severe","Catastrophic"]
   end
 
 
